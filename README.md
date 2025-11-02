@@ -14,13 +14,11 @@ Examples:
 - `php task-cli.php list`
 - `php task-cli.php list todo|in-progress|done`
 
-By doing this project I learned and practiced these topics:
+With this project I learned and practiced this:
 - Programming fundamentals
-- PHP syntax and fundamentals
+- PHP syntax
 - Arrays
 - Files
 - Databases
-- Control flow statements (if, switch, functions)
 - Classes, interfaces and objects
 - JSON serialization and deserialization
-- Types and variables
