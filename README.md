@@ -14,7 +14,7 @@ Examples:
 - `php task-cli.php list`
 - `php task-cli.php list todo|in-progress|done`
 
-This project practices and teaches these topics:
+By doing this project I learned and practiced these topics:
 - Programming fundamentals
 - PHP syntax and fundamentals
 - Arrays
