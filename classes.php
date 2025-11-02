@@ -88,7 +88,7 @@ class JsonDataSource implements DataSource
   private array $tasks;
   public function __construct()
   {
-    if (!filesize(self::PATH)) {
+    if (!file_exists(self::PATH) || !filesize(self::PATH)) {
       $handle = fopen(self::PATH, 'w');
       fwrite($handle, '[]');
       fclose($handle);
