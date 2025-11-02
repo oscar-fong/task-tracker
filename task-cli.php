@@ -7,7 +7,7 @@ $ds = new JsonDataSource();
 switch ($argv[1]) {
   case 'add':
     if (!isset($argv[2]) || $argv[2] == '') {
-      fwrite(STDERR, 'Error: Task not added, the task description was not provided' . PHP_EOL);
+      fwrite(STDERR, 'Error: Task not added. Missing arguments' . PHP_EOL);
       break;
     }
     $id = $ds->add($argv[2]);
@@ -26,22 +26,22 @@ switch ($argv[1]) {
     break;
   case 'delete':
     if (!isset($argv[2]) || $argv[2] == '') {
-      fwrite(STDERR, 'Error: Task not updated. Missing arguments' . PHP_EOL);
+      fwrite(STDERR, 'Error: Task not deleted. Missing arguments' . PHP_EOL);
       break;
     }
     if (!is_numeric($argv[2])) {
-      fwrite(STDERR, 'Error: Task not updated. The first argument is not numeric' . PHP_EOL);
+      fwrite(STDERR, 'Error: Task not deleted. The first argument is not numeric' . PHP_EOL);
       break;
     }
     $ds->delete($argv[2]);
     break;
   case 'mark-in-progress':
     if (!isset($argv[2]) || $argv[2] == '') {
-      fwrite(STDERR, 'Error: Task not updated. Missing arguments' . PHP_EOL);
+      fwrite(STDERR, 'Error: Task not marked. Missing arguments' . PHP_EOL);
       break;
     }
     if (!is_numeric($argv[2])) {
-      fwrite(STDERR, 'Error: Task not updated. The argument is not numeric' . PHP_EOL);
+      fwrite(STDERR, 'Error: Task not marked. The argument is not numeric' . PHP_EOL);
       break;
     }
     $ds->markInProgress($argv[2]);
